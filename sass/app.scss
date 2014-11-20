@@ -1,0 +1,64 @@
+@import "normalize";
+@import "min-grid";
+@import "mixins";
+@import "style";
+
+// LOAD FONTS
+
+.primary-font {
+  font-family: Helvetica, sans-serif;
+}
+.secondary-font {
+  font-family: Arial, sans-serif;
+}
+
+// SELECT FONT WEIGHT
+// 
+// .thin,
+// .extra-light,
+// .light,
+// .normal,
+.medium,
+// .demi-bold,
+.bold
+// .heavy,
+// .black,
+{
+	display:block;
+}
+//
+// SELECT FONT STYLE
+//
+// .thin-italic,
+// .extra-light-italic,
+// .light-italic,
+// .normal-italic,
+// .medium-italic,
+// .demi-bold-italic,
+// .bold-italic,
+// .heavy-italic,
+// .black-italic 
+// {
+// 	display:block;
+// }
+
+// CHANGE FONTS SIZE
+
+#glyphs-test p  {
+	font-size: rem-calc(20);
+}
+#fontSize-test p  {
+	
+}
+#color-test p  {
+
+}
+#lineHeight-test p  {
+	font-size: rem-calc(30);
+}
+#style-test p  {
+
+}
+#similarity-test p  {
+	font-size: rem-calc(40);
+}

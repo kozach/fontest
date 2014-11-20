@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "gulp-load-plugins": "~0.7.1",
+    "gulp": "~3.8.10",
+    "gulp-run": "~1.6.4",
+    "gulp-jade": "~0.9.0",
+    "gulp-sass": "~1.1.0",
+    "gulp-plumber": "~0.6.6",
+    "run-sequence": "~1.0.1",
+    "browser-sync": "~1.7.0",
+    "gulp-if": "~1.2.5",
+    "gulp-clean": "~0.3.1"
+  },
+  "dependencies": {
+    "del": "~0.1.3"
+  }
+}
