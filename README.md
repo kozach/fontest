@@ -1,10 +1,11 @@
 # Fontest
 It quickly creates static pages which can be opened on different devices\browsers for convenient testing fonts.
-Advantages:
-	- Fast generation using Gulp, SASS and Jade
-	- Simple and crossbrowser HTML\CSS
-	- Just open page or take screenshot, not need to do other clicks\settings on page
-	- There is no need to deploy on hosting
+
+## Advantages
+	Fast generation using Gulp, SASS and Jade
+	Simple and crossbrowser HTML\CSS
+	Just open page or take screenshot, not need to do other clicks\settings on page
+	There is no need to deploy on hosting
 
 ## Installation
 First, ensure that you have the latest Node.js and npm installed.
@@ -34,17 +35,17 @@ gulp (or gulp watch)
 ```
 ### Open page
 	All resulting files are in folder /build.
+
 	* If you run "gulp watch" then you can open the page from any device on the LAN (URL should appear in the terminal after running the command). In this case, if you change files Jade or SASS is on all devices automatically refresh the page
 	* You can upload files to your hosting
 	* You can use "gulp proxy" that would make the page accessible on the Internet (but you have to go to the file /Gulpfile.js and change the line "fontest" to to something unique).
 
 ### Test
-	Opens the page in different browsers on different devices.
+	Opens the page in diffrent browsers on different devices.
 	Produces automatic screenshots (http://www.browserstack.com/).
 	Share your URL with a type designer.
 
 ## Multilanguage
 	
 	Open file /text.json. Here is the text for all languages. Modify existing or add your own.
-
 	Then specify which language to use in the file /jade/_layouts/_main.jade first line.
