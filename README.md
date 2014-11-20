@@ -1,11 +1,10 @@
 # Fontest
 It quickly creates static pages which can be opened on different devices\browsers for convenient testing fonts.
-
 Advantages:
-	* Fast generation using Gulp, SASS and Jade
-	* Simple and crossbrowser HTML\CSS
-	* Just open page or take screenshot, not need to do other clicks\settings on page
-	* There is no need to deploy on hosting
+	- Fast generation using Gulp, SASS and Jade
+	- Simple and crossbrowser HTML\CSS
+	- Just open page or take screenshot, not need to do other clicks\settings on page
+	- There is no need to deploy on hosting
 
 ## Installation
 First, ensure that you have the latest Node.js and npm installed.
@@ -14,7 +13,6 @@ First, ensure that you have the latest Node.js and npm installed.
 git clone git@github.com:kozach/fontest.git
 cd fontest
 npm install
-
 ```
 ## Usage
 
@@ -22,18 +20,17 @@ npm install
 Choose two fonts that you want to test ( it can be as different fonts and font the same but the downloaded\generated in different places)
 
 ### Add fonts to fontest
-	* Font-face insert - put fonts files to /build/fonts and add @font-face to /sass/app.scss) 
+	Font-face insert - put fonts files to /build/fonts and add @font-face to /sass/app.scss) 
 	or
-	* Google Fonts link insert - get font on Google Fonts and insert link to /jade/index.jade after "block styles" (there commented line like example). 
+	Google Fonts link insert - get font on Google Fonts and insert link to /jade/index.jade after "block styles" (there commented line like example). 
 ### Configure app.scss 
-	* Open file /sass/app.scss, change font names and uncomment the necessary font-weigth and font-style selectors 
+	Open file /sass/app.scss, change font names and uncomment the necessary font-weigth and font-style selectors 
 
 ### Generate files
 Run in your terminal:
 ```
 cd fontest
 gulp (or gulp watch)
-
 ```
 ### Open page
 	All resulting files are in folder /build.
@@ -42,9 +39,9 @@ gulp (or gulp watch)
 	* You can use "gulp proxy" that would make the page accessible on the Internet (but you have to go to the file /Gulpfile.js and change the line "fontest" to to something unique).
 
 ### Test
-	* Opens the page in different browsers on different devices
-	* Produces automatic screenshots (http://www.browserstack.com/)
-	* Share your URL with a type designer
+	Opens the page in different browsers on different devices.
+	Produces automatic screenshots (http://www.browserstack.com/).
+	Share your URL with a type designer.
 
 ## Multilanguage
 	
