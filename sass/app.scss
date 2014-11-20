@@ -3,7 +3,9 @@
 @import "mixins";
 @import "style";
 
-// LOAD FONTS
+/* 
+	Change the font names
+*/
 
 .primary-font {
   font-family: Helvetica, sans-serif;
@@ -12,53 +14,28 @@
   font-family: Arial, sans-serif;
 }
 
-// SELECT FONT WEIGHT
-// 
+/* 
+	Uncomment the necessary font-weigth and font-style selectors 
+*/
+
 // .thin,
+// .thin-italic,
 // .extra-light,
+// .extra-light-italic,
 // .light,
+// .light-italic,
 // .normal,
+// .normal-italic,
 .medium,
+// .medium-italic,
 // .demi-bold,
+// .demi-bold-italic,
 .bold
+// .bold-italic,
 // .heavy,
+// .heavy-italic,
 // .black,
+// .black-italic,
 {
 	display:block;
-}
-//
-// SELECT FONT STYLE
-//
-// .thin-italic,
-// .extra-light-italic,
-// .light-italic,
-// .normal-italic,
-// .medium-italic,
-// .demi-bold-italic,
-// .bold-italic,
-// .heavy-italic,
-// .black-italic 
-// {
-// 	display:block;
-// }
-
-// CHANGE FONTS SIZE
-
-#glyphs-test p  {
-	font-size: rem-calc(20);
-}
-#fontSize-test p  {
-	
-}
-#color-test p  {
-
-}
-#lineHeight-test p  {
-	font-size: rem-calc(30);
-}
-#style-test p  {
-
-}
-#similarity-test p  {
-	font-size: rem-calc(40);
 }

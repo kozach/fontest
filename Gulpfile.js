@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 
 gulp.task('proxy', function() {
     gulp.src('/')
-        .pipe($.run('./srvdir fontest:./build'));
+        .pipe($.run('./srvdir fontest:./build')); //change this line to use "gulp proxy"
 });
 
 gulp.task('browser-sync', function() {

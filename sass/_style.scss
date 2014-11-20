@@ -5,6 +5,24 @@ body {
 html {
     font-size: 100%;
 }
+#glyphs-test p  {
+    font-size: rem-calc(20);
+}
+#fontSize-test p  {
+    
+}
+#color-test p  {
+
+}
+#lineHeight-test p  {
+    font-size: rem-calc(30);
+}
+#style-test p  {
+
+}
+#similarity-test p  {
+    font-size: rem-calc(40);
+}
 #similarity-test {
     .content {
         border: 0px;
