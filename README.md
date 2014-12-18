@@ -1,4 +1,4 @@
-# Fontest
+# Heroic Fontest
 It quickly creates static pages which can be opened on different devices\browsers for convenient testing fonts.
 
 ## Advantages
@@ -11,8 +11,8 @@ It quickly creates static pages which can be opened on different devices\browser
 First, ensure that you have the latest Node.js and npm installed.
 
 ```
-git clone git@github.com:kozach/fontest.git
-cd fontest
+git clone git@github.com:kozach/heroic-fontest.git
+cd heroic-fontest
 npm install
 ```
 ## Usage
@@ -30,7 +30,7 @@ Choose two fonts that you want to test ( it can be as different fonts and font t
 ### Generate files
 Run in your terminal:
 ```
-cd fontest
+cd heroic-fontest
 gulp (or gulp watch)
 ```
 ### Open page
