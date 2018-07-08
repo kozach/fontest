@@ -11,7 +11,7 @@ It quickly creates static pages which can be opened on different devices\browser
 First, ensure that you have the latest Node.js and npm installed.
 
 ```
-git clone git@github.com:kozach/heroic-fontest.git
+git clone
 cd heroic-fontest
 npm install
 ```
@@ -21,11 +21,11 @@ npm install
 Choose two fonts that you want to test ( it can be as different fonts and font the same but the downloaded\generated in different places)
 
 ### Add fonts to fontest
-	Font-face insert - put fonts files to /build/fonts and add @font-face to /sass/app.scss) 
+	Font-face insert - put fonts files to /build/fonts and add @font-face to /sass/app.scss)
 	or
-	Google Fonts link insert - get font on Google Fonts and insert link to /jade/index.jade after "block styles" (there commented line like example). 
-### Configure app.scss 
-	Open file /sass/app.scss, change font names and uncomment the necessary font-weigth and font-style selectors 
+	Google Fonts link insert - get font on Google Fonts and insert link to /jade/index.jade after "block styles" (there commented line like example).
+### Configure app.scss
+	Open file /sass/app.scss, change font names and uncomment the necessary font-weigth and font-style selectors
 
 ### Generate files
 Run in your terminal:
@@ -46,6 +46,5 @@ gulp (or gulp watch)
 	Share your URL with a type designer.
 
 ## Multilanguage
-	
 	Open file /text.json. Here is the text for all languages. Modify existing or add your own.
 	Then specify which language to use in the file /jade/_layouts/_main.jade first line.
