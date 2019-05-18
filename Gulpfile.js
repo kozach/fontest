@@ -1,60 +1,55 @@
-var gulp = require('gulp'),
-	$ = require('gulp-load-plugins')(),
-	runSequence = require('run-sequence'),
-	browserSync = require('browser-sync'),
-    reload = browserSync.reload,
-    watch = false,
-    text = require('./text.json');
+const { src, dest, watch, series, parallel } = require('gulp');
+const fs = require('fs');
+const del = require('del');
+const pug = require('gulp-pug');
+const text = require('./src/text.json');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync').create();
+sass.compiler = require('node-sass');
 
-gulp.task('proxy', function() {
-    gulp.src('/')
-        .pipe($.run('./srvdir fontest:./build'));
-});
+function clean(cb) {
+  return del(["./build/"], cb);
+}
 
-gulp.task('browser-sync', function() {
-    browserSync.init(null, {
-        server: {
-            baseDir: './build'
-        }
-    });
-});
+function copy() {
+  return src('./src/fonts/**/*')
+    .pipe(dest('./build/fonts'));
+}
 
-gulp.task('clean', function() {
-    return gulp.src(['build/**/*.css', 'build/**/*.html'], {
-            read: false
-        })
-        .pipe($.plumber())
-        .pipe($.clean());
-});
+function html(cb) {
+	return src('./src/pug/*.pug')
+		.pipe(pug({
+			pretty: true,
+			basedir: './src/pug',
+			data: text
+		}))
+		.pipe(dest('./build'))
+		.pipe(browserSync.stream());
+		cb();
+}
 
-gulp.task('sass', function() {
-    return gulp.src('sass/**/*.scss')
-        .pipe($.plumber())
-        .pipe($.sass({outputStyle:"compressed"}))
-        .pipe(gulp.dest('./build/css'))
-        .pipe($.if(watch, reload({stream: true})));
-});
+function css(cb) {
+	return src('./src/sass/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(dest('./build/css'))
+		.pipe(browserSync.stream());
+		cb();
+}
 
-gulp.task('jade', function() {
-    return gulp.src(['jade/**/*.jade', '!jade/**/_*'])
-        .pipe($.plumber())
-        .pipe($.jade({
-            pretty: true,
-            basedir: './jade',
-            locals: text
-        }))
-        .pipe(gulp.dest('./build'))
-        .pipe($.if(watch, reload({stream: true})));
-});
+function changes(cb) {
+	browserSync.init({
+			server: {
+					baseDir: "./build"
+			}
+	});
+  watch('./src/sass/**/*.scss', css);
+  watch('./src/pug/**/*.pug', html);
+	watch('./build/**/*.html', { events: 'change' }, function(cb) {
+		browserSync.reload;
+		cb();
+	});
+	cb();
+}
 
-gulp.task('default', function(callback) {
-  runSequence('clean',
-              ['jade', 'sass'],
-              callback);
-});
-
-gulp.task('watch', ['default', 'browser-sync'], function() {
-    gulp.watch(['sass/**/*.scss'], ['sass']);
-    gulp.watch(['jade/**/*.jade'], ['jade']);
-    watch = true;
-});
+exports.default = series(clean, copy, parallel(html, css));
+exports.watch = series(clean, copy, parallel(html, css), changes);

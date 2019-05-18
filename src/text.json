@@ -1,0 +1,40 @@
+{
+	"en" : {
+		"glyphs" : {
+			"alphabet" : {
+				"uppercase" : "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
+				"lowercase" : "a b c d e f g h i j k l m n o p q r s t u v w x y z",
+				"mixed" : "A a B b C c D d E e F f G g H h I i J j K k L l M m N n O o P p Q q R r S s T t U u V v W w X x Y y Z z"				
+			},
+			"numbers" : "1 2 3 4 5 6 7 8 9 0",
+			"symbols" : "& @ . , ? ! ’ “ ” ( ) $ % # ^ & * { } [ ] ; : | < > - + = _ ~"
+		},
+		"pangrams" : [
+			"An inspired calligrapher can create pages of beauty using stick ink, quill, brush, pick-axe, buzz saw, or even strawberry jam.",
+			"Jelly-like above the high wire, six quaking pachyderms kept the climax of the extravaganza in a dazzling state of flux.",
+			"Just work for improved basic techniques to maximize your typing skill."
+		],
+		"words" : [
+			"Frankalmoigne"
+		]
+	},
+	"ru" : {
+		"glyphs" : {
+			"alphabet" : {
+				"uppercase" : "А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я Ґ Є I Ї",
+				"lowercase" : "а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я ґ є і ї",
+				"mixed" : "А а Б б В в Г г Д д Е е Ё ё Ж ж З з И и Й й К к Л л М м Н н О о П п Р р С с Т т У у Ф ф Х х Ц ц Ч ч Ш ш Щ щ Ъ ь Ы ы Ъ ъ Э э Ю ю Я я Ґ ґ Є є I і Ї ї"				
+			},
+			"numbers" : "1 2 3 4 5 6 7 8 9 0",
+			"symbols" : "& @ . , ? ! ’ “ ” ( ) $ % # ^ & * { } [ ] ; : | < > - + = _ ~"
+		},
+		"pangrams" : [
+			"Всё ускоряющаяся эволюция компьютерных технологий предъявила жёсткие требования к производителям как собственно вычислительной техники, так и периферийных устройств.",
+			"Завершён ежегодный съезд эрудированных школьников, мечтающих глубоко проникнуть в тайны физических явлений и химических реакций.",
+			"Шифровальщица попросту забыла ряд ключевых множителей и тэгов."
+		],
+		"words" : [
+			"Уместорождения"
+		]
+	}
+}

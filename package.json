@@ -1,26 +1,14 @@
 {
     "name": "heroic-fontest",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "main": "gulpfile.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/kozach/heroic-fontest.git"
     },
     "engines": {
-        "node": "0.12.7",
-        "npm": "2.11.3"
-    },
-    "dependencies": {
-        "browser-sync": "~2.24.5",
-        "gulp": "~3.9.1",
-        "gulp-clean": "~.4.0",
-        "gulp-if": "~2.0.2",
-        "gulp-jade": "~1.1.0",
-        "gulp-load-plugins": "~1.5.0",
-        "gulp-plumber": "~1.2.0",
-        "gulp-run": "~1.7.1",
-        "gulp-sass": "~4.0.1",
-        "run-sequence": "~2.2.1"
+        "node": "12.2.0",
+        "npm": "6.9.0"
     },
     "keywords": [
         "static",
@@ -33,5 +21,13 @@
             "type": "MIT",
             "url": "https://github.com/kozach/heroic-fontest/blob/master/LICENSE"
         }
-    ]
+    ],
+    "devDependencies": {
+        "browser-sync": "^2.26.5",
+        "del": "^4.1.1",
+        "gulp": "^4.0.2",
+        "gulp-pug": "^4.0.1",
+        "gulp-sass": "^4.0.2",
+        "node-sass": "^4.12.0"
+    }
 }
